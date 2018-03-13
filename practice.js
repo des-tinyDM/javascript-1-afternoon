@@ -37,20 +37,18 @@ var groceries = ['apples', 'milk', 'eggs', 'bread'];
 //Write a function called doubleCheck that takes in an array
 //as a parameter.
 
-function doubleCheck(arr){
-
 //If the array does not contain "chocolate", add "chocolate".
 //doubleCheck should return the array.
 
-  for (i=0;i<arr.length;i++) {
-    if (arr[i] === "chocolate"){
+function doubleCheck(arr){
+    if (arr.includes('chocolate') === true){
       return arr;
-    } 
-    else {
+    } else {
       arr.push('chocolate');
     }
-  } 
-}
+    return arr;
+  }
+  doubleCheck(groceries);
 
 //////////////////PROBLEM 5////////////////////
 
@@ -207,8 +205,3 @@ var innerFn = outerFn();
 //Now invoke innerFn and save the result to a variable called finalResult.
 
 finalResult = innerFn();
-
-
-var mySum = 0;
-
-var mySum = mySum + arr[i]
